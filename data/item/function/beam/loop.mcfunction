@@ -15,7 +15,7 @@
 
 # ビームがモブを通ったら爆発させる
 # 実行位置を調整 -> 1ブロック範囲内に誰かいるかをチェック -> 実行位置を戻して -> クリーパーが爆発！
-    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!Bomb,dx=0] positioned ~0.5 ~0.5 ~0.5 run summon tnt ~ ~ ~ {Tags:["Bomb"],ExplosionRadius:3b,Fuse:0}
+    execute positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=#lib:living,type=!player,tag=!Bomb,dx=0] positioned ~0.5 ~0.5 ~0.5 run summon tnt ~ ~ ~
 
 # パーティクルを表示
     particle dust{color:[1.000,1.000,0.780],scale:0.5} ^ ^ ^ 0.01 0.01 0.01 0 1 force @a[distance=..30]
